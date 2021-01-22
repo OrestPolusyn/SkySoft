@@ -1,0 +1,93 @@
+.header {
+  background-color: $header;
+  padding: 20px 0;
+  &__wrapper {
+    @extend %display-flex;
+  }
+}
+
+.menu {
+  &__list {
+    @extend %display-flex;
+  }
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+  &__link {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    position: relative;
+    padding: 10px;
+    transition: all 0.2s ease-in-out 0s;
+
+    &::after,
+    &::before {
+      @extend %angle;
+      opacity: 0;
+      transition: all 0.2s ease-in-out 0s;
+    }
+    &::after {
+      bottom: 0;
+      right: 0;
+      border-width: 0 1px 1px 0;
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      border-width: 1px 0 0 1px;
+    }
+
+    &:hover {
+      color: #fbc903;
+
+      &::after,
+      &::before {
+        width: 20px;
+        height: 20px;
+        opacity: 1;
+      }
+    }
+  }
+  &__link.active-link {
+    color: #fbc903;
+    &::after,
+    &::before {
+      width: 20px;
+      height: 20px;
+      opacity: 1;
+    }
+  }
+}
+
+.lang-block {
+  &__list {
+    @extend %display-flex;
+  }
+  &__item:not(:last-child) {
+    position: relative;
+    margin-right: 20px;
+    &::after {
+      content: "";
+      position: absolute;
+      top: -2px;
+      right: -12px;
+      height: 18px;
+      width: 2px;
+      background-color: #fff;
+    }
+  }
+  &__link {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    transition: all 0.2s ease-in-out 0s;
+
+    &:hover {
+      color: #fbc903;
+    }
+  }
+  &__link.active-link {
+    color: #fbc903;
+  }
+}

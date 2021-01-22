@@ -1,0 +1,112 @@
+$priority: #0d73fc;
+$header: #16a4d6;
+$slogan: #333;
+$top-bg: #edf1f4;
+
+%OpenSans-400 {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%OpenSans-700 {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+}
+
+%OpenSans-800 {
+  font-family: "OpenSans-ExtraBold", sans-serif;
+  font-weight: 800;
+}
+
+%Raleway-300 {
+  font-family: "Raleway-Light", sans-serif;
+  font-weight: 300;
+}
+
+%Raleway-400 {
+  font-family: "Raleway-Regular", sans-serif;
+  font-weight: 400;
+}
+
+%Raleway-500 {
+  font-family: "Raleway-Medium", sans-serif;
+  font-weight: 500;
+}
+
+%Raleway-700 {
+  font-family: "Raleway-Bold", sans-serif;
+  font-weight: 700;
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}x(#{$numbers});
+}
+
+%checkbox-hidden {
+  width: 0;
+  height: 0;
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+%text-limit {
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-clamp: 3;
+  box-orient: vertical;
+}
+
+%display-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%active-link {
+  color: $priority;
+  background-color: #fff;
+  border-color: $priority;
+}
+
+%title {
+  display: inline-block;
+  color: $priority;
+  line-height: 1.3;
+  @extend %Raleway-700;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+%btn {
+  display: block;
+  line-height: 1;
+  @extend %Raleway-700;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+  width: 160px;
+  background-color: $priority;
+  color: #fff;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+%angle {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fff;
+  z-index: 2;
+}
