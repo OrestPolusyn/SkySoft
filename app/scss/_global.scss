@@ -10,6 +10,7 @@ body {
   background-color: #fff;
   overflow: visible;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .container {
@@ -19,3 +20,18 @@ body {
   width: 100%;
 }
 
+#toTop {
+  bottom: 0;
+  right: 0;
+  display: none;
+  width: 60px;
+  height: 40px;
+  overflow: hidden;
+  position: fixed;
+  text-decoration: none;
+  z-index: 9999;
+  font-size: 0;
+  color: transparent;
+  background-color: #16a4d6;
+  opacity: 0.7;
+}

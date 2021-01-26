@@ -1,0 +1,65 @@
+.about {
+  background-color: $priority;
+  margin-bottom: 100px;
+  background-repeat: no-repeat;
+  background-size: 50%, contain;
+  background-position: left center;
+  background-attachment: fixed;
+  margin-bottom: 100px;
+  position: relative;
+  
+  &::before {
+    content: "";
+    opacity: 0.6;
+    position: absolute;
+    background-color: #333;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    left: 0;
+  }
+  @media screen and (min-color-index: 0) and (-webkit-min-device-pixel-ratio: 0) {
+    .about {
+      background-attachment: scroll;
+    }
+  }
+
+  &__content {
+    margin-left: auto;
+    max-width: 580px;
+    width: 100%;
+    padding: 80px 20px;
+  }
+  .content-box {
+    &__title {
+      margin: 0 0 60px 40px;
+      color: #fff;
+
+      &::before,
+      &::after {
+        border-color: #fff;
+      }
+    }
+
+    &__text {
+      padding: 0;
+      text-align: justify;
+      font-style: normal;
+      font-size: 16px;
+      line-height: 2;
+      margin-bottom: 20px;
+      color: #fff;
+
+      &:nth-child(3) {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__link {
+      margin-left: 0;
+      @extend %btn;
+      background-color: #fff;
+      color: $priority;
+    }
+  }
+}

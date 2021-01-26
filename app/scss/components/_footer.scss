@@ -1,0 +1,77 @@
+.footer {
+  background-color: #c3c3c3;
+  padding: 50px 0 20px;
+}
+
+.footer-top {
+  @extend %display-flex;
+  align-items: start;
+  border-bottom: 1px solid $slogan;
+  margin-bottom: 30px;
+  &__item {
+    max-width: 270px;
+    width: 100%;
+  }
+
+  .logo {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  &__text {
+    color: $slogan;
+    line-height: 1.5;
+  }
+
+  &__title {
+    margin-bottom: 30px;
+    @extend %Raleway-700;
+    font-size: 18px;
+    font-style: normal;
+    display: block;
+  }
+
+  &__address {
+    color: $slogan;
+    display: block;
+    margin-bottom: 20px;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  &__link {
+    color: $slogan;
+    display: block;
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-style: normal;
+    transition: all 0.3s ease-in-out;
+
+    &:nth-child(2n) {
+      margin-bottom: 20px;
+    }
+    &:hover {
+      color: $priority;
+    }
+  }
+  &__btn {
+    @extend %btn;
+    width: 100%;
+    line-height: 1.4;
+
+    &:hover {
+      @extend %active-link;
+    }
+  }
+}
+
+.footer-bottom {
+  @extend %display-flex;
+
+  .author__link {
+    background: -webkit-linear-gradient(rgb(255, 136, 0), rgb(255, 0, 0));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

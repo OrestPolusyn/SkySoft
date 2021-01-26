@@ -1,4 +1,5 @@
 $priority: #0d73fc;
+$secondary:#f5f5f5;
 $header: #16a4d6;
 $slogan: #333;
 $top-bg: #edf1f4;
@@ -100,6 +101,7 @@ $top-bg: #edf1f4;
   padding: 14px 20px;
   border: 1px solid transparent;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 %angle {

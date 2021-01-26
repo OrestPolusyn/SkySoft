@@ -13,27 +13,47 @@
   @@include('components/_header.html')
   <!-- end header section -->
   <main class="main">
+    <!-- start slider section -->
+    @@include('components/home/_slider.html')
+    <!-- end slider section -->
 
-    <div class="conrainer">
-
-      <!-- start slider section -->
-      @@include('components/home/_slider.html')
-      <!-- end slider section -->
+    <div class="container">
 
       <!-- start offer section -->
       @@include('components/home/_offer.html')
       <!-- end offer section -->
+    </div>
 
-      <!-- start about section -->
-      @@include('components/home/_choose.html')
-      <!-- end about section -->
+    <!-- start about section -->
+    @@include('components/home/_choose.html')
+    <!-- end about section -->
 
-      <!-- start timeline section -->
-      @@include('components/home/_timeline.html')
-      <!-- end timeline section -->
+
+
+    <!-- start timeline section -->
+    @@include('components/home/_timeline.html')
+    <!-- end timeline section -->
+
+    <!-- start numbers section -->
+    @@include('components/home/_numbers.html')
+    <!-- end numbers section -->
+    <div class="container">
+      <!-- start numbers section -->
+      @@include('components/home/_articles.html')
+      <!-- end numbers section -->
+
 
     </div>
 
+    <!-- start contacts section -->
+    @@include('components/home/_contacts.html')
+    <!-- end contacts section -->
+
+    <!-- start footer section -->
+    @@include('components/_footer.html')
+    <!-- end footer section -->
+
+    <a href="#" id="toTop" style="display: inline;"><span id="toTopHover" style="opacity: 0;"></span>To Top</a>
   </main>
 
   <script src="js/main.min.js "></script>

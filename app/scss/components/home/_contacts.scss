@@ -1,0 +1,159 @@
+.contacts {
+  background-image: url("../images/contact-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding-top: 80px;
+  margin-bottom: 100px;
+
+  &__content {
+    text-align: center;
+  }
+
+  .content-box__slogan {
+    margin-bottom: 6px;
+  }
+
+  .content-box__title {
+    margin-bottom: 40px;
+  }
+
+  .content-box__text {
+    margin-bottom: 40px;
+  }
+}
+
+.contacts-block {
+  background-color: #fff;
+  padding: 50px 150px;
+  box-shadow: 0 4px 16px 0 rgba(51, 51, 51, 0.1);
+  margin-bottom: 80px;
+  &__list {
+    @extend %display-flex;
+  }
+
+  &__item {
+    max-width: 260px;
+    width: 100%;
+    text-align: left;
+    padding-left: 60px;
+    position: relative;
+  }
+  .icon::before {
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    left: 20px;
+    top: -4px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+
+  &__item--mail::before {
+    background-image: url("../images/icons/map-marker.svg");
+  }
+
+  &__item--phone::before {
+    background-image: url("../images/icons/mail.svg");
+  }
+
+  &__item--marker::before {
+    background-image: url("../images/icons/phone.svg");
+  }
+
+  &__title {
+    @extend %OpenSans-800;
+    color: $slogan;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 16px;
+    list-style: none;
+    font-style: normal;
+  }
+  &__adrress,
+  &__phone,
+  &__email {
+    display: block;
+    line-height: 2;
+    color: #a4a4a4;
+    font-style: normal;
+    @extend %text-limit;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  &__email,
+  &__phone-link {
+    color: #a4a4a4;
+    &:hover {
+      color: $priority;
+    }
+  }
+}
+
+.contacts-form {
+  text-align: center;
+  margin: 0 auto;
+
+  .content-box__title {
+    &::before,
+    &::after {
+      border: none;
+    }
+  }
+}
+
+.form {
+  max-width: 720px;
+  width: 100%;
+  margin: 0 auto;
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="tel"],
+  textarea,
+  select {
+    height: 50px;
+    border: 1px solid #e6e4e4;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0;
+    color: #a4a4a4;
+    padding: 10px 20px 10px;
+    font-size: 14px;
+    margin-bottom: 30px;
+    &::placeholder {
+      color: #a7a7a7;
+      font-style: italic;
+    }
+  }
+
+  &__top {
+    @extend %display-flex;
+    input[type="text"],
+    input[type="email"] {
+      max-width: 340px;
+      display: block;
+      width: 100%;
+    }
+  }
+  &__subject {
+    width: 100%;
+  }
+
+  &__text {
+    width: 100%;
+    min-height: 140px;
+    resize: vertical;
+    max-height: 400px;
+  }
+
+  &__send {
+    @extend %btn;
+    &:hover{
+      @extend %active-link;
+    }
+  }
+}
