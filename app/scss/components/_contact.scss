@@ -1,0 +1,51 @@
+.contact {
+  background-color: #fff;
+  margin-bottom: 100px;
+  @extend %display-flex;
+  padding: 0 150px;
+
+  &__content {
+    width: 50%;
+    margin-right: 60px;
+  }
+
+  .contacts-block {
+    padding: 50px;
+  }
+
+  .contacts-block__list {
+    display: block;
+  }
+
+  .contacts-block__item {
+    max-width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .form__top input[type="text"] {
+    max-width: 290px;
+    &:first-child {
+      margin-right: 20px;
+    }
+  }
+
+  &__map {
+    height: 888px;
+    width: 50%;
+    padding-top: 40px;
+  }
+}
+
+#map {
+  height: 100%;
+}
+
+.firstHeading {
+  margin-bottom: 6px;
+}
+
+#bodyContent p {
+  margin-bottom: 6px;
+}

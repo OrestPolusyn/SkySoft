@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkySoft | Про нас</title>
+  <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+  <!-- start header section -->
+  @@include('components/_header.html')
+  <!-- end header section -->
+
+  <main class="main">
+
+    <!-- start breadcrumbs section -->
+    @@include('components/_breadcrumbs.html', {"text": "Про компанію"}
+    )
+    <!-- end breadcrumbs section -->
+
+    <div class="container">
+      <!-- start breadcrumbs section -->
+      @@include('components/about/_company.html')
+      <!-- end breadcrumbs section -->
+    </div>
+
+    <!-- start about section -->
+    @@include('components/home/_choose.html')
+    <!-- end about section -->
+
+    <!-- start timeline section -->
+    @@include('components/home/_timeline.html')
+    <!-- end timeline section -->
+
+
+    <!-- start partners section -->
+    @@include('components/about/_partners.html')
+    <!-- end partners section -->
+
+
+  </main>
+
+  <!-- start footer section -->
+  @@include('components/_footer.html')
+  <!-- end footer section -->
+
+  <a href="#" id="toTop" style="display: inline;">
+    <span id="toTopHover" style="opacity: 0;"></span>
+    To Top
+  </a>
+
+
+  <script src="js/main.min.js "></script>
+</body>
+
+</html>

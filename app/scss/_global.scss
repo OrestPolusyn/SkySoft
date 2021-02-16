@@ -10,7 +10,15 @@ body {
   background-color: #fff;
   overflow: visible;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+
   scroll-behavior: smooth;
+}
+
+.main {
+  padding-top: 80px;
+  flex-grow: 1;
 }
 
 .container {
@@ -34,4 +42,35 @@ body {
   color: transparent;
   background-color: #16a4d6;
   opacity: 0.7;
+}
+
+.content-box__title {
+  display: inline-block;
+}
+
+.title {
+  font-size: 36px;
+  color: $slogan;
+  margin-bottom: 40px;
+  @extend %Raleway-700;
+  line-height: 1.4;
+  @extend %text-limit;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+.slogan {
+  text-transform: uppercase;
+  display: block;
+  @extend %Raleway-700;
+  font-size: 16px;
+  color: #a4a4a4;
+  margin-bottom: 14px;
+}
+
+.text {
+  color: $slogan;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }

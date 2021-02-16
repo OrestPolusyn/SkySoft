@@ -8,9 +8,13 @@
   align-items: start;
   border-bottom: 1px solid $slogan;
   margin-bottom: 30px;
+
   &__item {
     max-width: 270px;
     width: 100%;
+    &:not(:last-child){
+      margin-right: 30px;
+    }
   }
 
   .logo {
@@ -21,6 +25,7 @@
   &__text {
     color: $slogan;
     line-height: 1.5;
+    @extend %text-limit;
   }
 
   &__title {
@@ -51,11 +56,14 @@
     &:nth-child(2n) {
       margin-bottom: 20px;
     }
+
     &:hover {
       color: $priority;
     }
   }
+
   &__btn {
+    height: 74px;
     @extend %btn;
     width: 100%;
     line-height: 1.4;
