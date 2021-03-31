@@ -1,0 +1,25 @@
+.price {
+  padding: 100px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-attachment: fixed;
+
+
+  td {
+    height: 50px;
+    width: 50px;
+    background-color: purple;
+    border: 1px solid #000;
+  }
+
+  &__title {
+    color: #fff;
+  }
+}
+
+
+.breadcrumbs {
+  margin-bottom: 0;
+}

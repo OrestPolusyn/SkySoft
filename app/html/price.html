@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SkySoft | Контакти</title>
+  <title>SkySoft | Тарифи</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
+
   <!-- start header section -->
   @@include('components/_header.html')
   <!-- end header section -->
@@ -16,14 +17,15 @@
   <main class="main">
 
     <!-- start breadcrumbs section -->
-    @@include('components/_breadcrumbs.html', {"page-title": "Контакти", "text": "Контакти" })
+    @@include('components/_breadcrumbs.html', {"page-title": "Ціна електричної енергії", "text": "Тарифи" })
     <!-- end breadcrumbs section -->
 
-    <!-- start contact section -->
-    @@include('components/_contact.html')
-    <!-- end contact section -->
+    <!-- start header section -->
+    @@include('components/price/_table.html')
+    <!-- end header section -->
 
   </main>
+
   <!-- start footer section -->
   @@include('components/_footer.html')
   <!-- end footer section -->
@@ -33,8 +35,6 @@
     To Top
   </a>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?callback=initMap"></script>
-  <script src="js/main.min.js "></script>
 </body>
 
 </html>
