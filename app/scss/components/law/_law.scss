@@ -1,0 +1,72 @@
+.law {
+  margin-bottom: 100px;
+
+  .content-box {
+    margin-bottom: 40px;
+
+    &__title {
+      margin: 0 0 40px 40px;
+      font-size: 30px;
+    }
+
+    &__text {
+      padding: 0;
+      font-size: 18px;
+      font-style: normal;
+      @extend %Raleway-500;
+    }
+  }
+
+  &__acts {
+    margin-bottom: 50px;
+  }
+
+  &__list {
+    padding-left: 40px;
+    counter-reset: num;
+    list-style: none;
+  }
+
+  &__item {
+    counter-increment: num;
+    @extend %Raleway-700;
+    color: #0d73fc;
+    font-size: 22px;
+    transition: color 0.5s ease-in-out;
+    position: relative;
+    background-color: rgba(238, 238, 238, 0.9);
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgba(#0d73fc, 0.85);
+      &:before {
+        color: #fff;
+      }
+    }
+
+    &:before {
+      content: counter(num);
+      position: absolute;
+      text-align: right;
+      @extend %Raleway-400;
+      font-size: 23px;
+      font-weight: bold;
+      top: 10px;
+      left: 10px;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+
+  &__link {
+    font-size: 16px;
+    color: #0d73fc;
+    display: block;
+    transition: color 0.3s ease-in-out;
+    padding: 16px 10px 16px 40px;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}

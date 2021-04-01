@@ -5,9 +5,9 @@
   background-position: center calc(100% - 80%);
   position: relative;
   background-attachment: fixed;
-
   padding: 60px 10px;
   margin-bottom: 100px;
+
   &::before {
     content: "";
     position: absolute;
@@ -17,16 +17,15 @@
     bottom: 0;
     right: 0;
     left: 0;
-    
   }
 
   &__title {
     @extend %title;
-      overflow: visible;
-
+    overflow: visible;
     position: relative;
     color: #fff;
-    margin: 0;
+    margin: 0 0 0 40px;
+
     &::before,
     &::after {
       @extend %angle;
@@ -51,12 +50,15 @@
 
 .breadcrumbs-block {
   @extend %display-flex;
+
   &__list {
     @extend %display-flex;
   }
+
   &__item {
     margin-right: 20px;
     position: relative;
+
     &:first-child::after {
       content: "/";
       position: absolute;
@@ -68,16 +70,20 @@
       color: $priority;
     }
   }
+
   &__link {
     @extend %Raleway-400;
     color: #fff;
     letter-spacing: 0.03em;
+
     &:hover {
       color: $priority;
     }
   }
+
   &__link--last {
     color: #fff;
+
     &:hover {
       color: #fff;
     }

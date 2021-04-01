@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Законодавство в сфері енергетики</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <!-- start header section -->
+  @@include('components/_header.html')
+  <!-- end header section -->
+
+  <main class="main">
+
+    <!-- start breadcrumbs section -->
+    @@include('components/_breadcrumbs.html', {"page-title": "Законодавство", "text": "Законодавство"})
+    <!-- end breadcrumbs section -->
+    <div class="container">
+
+      <!-- start law section -->
+      @@include('components/law/_law.html')
+      <!-- end law section -->
+
+    </div>
+    
+  </main>
+
+  <!-- start footer section -->
+  @@include('components/_footer.html')
+  <!-- end footer section -->
+
+  <a href="#" id="toTop" style="display: inline;">
+    <span id="toTopHover" style="opacity: 0;"></span>
+    To Top
+  </a>
+
+</body>
+
+</html>
