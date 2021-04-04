@@ -1,0 +1,96 @@
+.faq {
+  margin-bottom: 70px;
+
+  .content-box__text {
+    padding: 0;
+    font-style: normal;
+    margin-bottom: 50px;
+  }
+
+  &__title{
+    @extend %OpenSans-400;
+    font-size: 20px;
+    color: $secondary;
+  }
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tabs {
+    width: 50%;
+
+    &:first-child {
+      margin-right: 70px;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+
+    &:first-child .faq__content {
+      display: block;
+    }
+  }
+
+  &__tab {
+    position: relative;
+    background-color: rgba(13, 115, 252, 0.85);
+    padding: 20px 30px;
+  }
+
+  &__content {
+    border: 1px solid rgba(13, 115, 252, 0.85);
+    padding: 20px 30px;
+    display: none;
+
+    .content-box__text {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &.open {
+      span {
+        transform: rotate(135deg);
+      }
+
+      span:nth-child(2) {
+        transform: rotate(225deg);
+      }
+    }
+
+    span {
+      display: block;
+      height: 2px;
+      width: 20px;
+      background: #fff;
+      border-radius: 2px;
+      opacity: 1;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%) rotate(0deg);
+      transition: .25s ease-in-out;
+
+      &:nth-child(2) {
+        top: 40%;
+        transform: translateY(-50%) rotate(90deg);
+      }
+    }
+
+  }
+}

@@ -40,7 +40,8 @@
 
     &:hover {
       background-color: rgba(#0d73fc, 0.85);
-      &:before {
+
+      &:before, .law__link {
         color: #fff;
       }
     }
@@ -65,8 +66,6 @@
     transition: color 0.3s ease-in-out;
     padding: 16px 10px 16px 40px;
 
-    &:hover {
-      color: #fff;
-    }
+   
   }
 }

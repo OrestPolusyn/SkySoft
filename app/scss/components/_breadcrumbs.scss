@@ -5,8 +5,8 @@
   background-position: center calc(100% - 80%);
   position: relative;
   background-attachment: fixed;
-  padding: 60px 10px;
-  margin-bottom: 100px;
+  padding: 40px 0;
+  margin-bottom: 60px;
 
   &::before {
     content: "";
@@ -25,6 +25,7 @@
     position: relative;
     color: #fff;
     margin: 0 0 0 40px;
+    font-size: 26px;
 
     &::before,
     &::after {

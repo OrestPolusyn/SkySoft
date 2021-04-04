@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="images/favicon.ico" rel="icon">
-  <title>SkySoft | Not found</title>
+  <title>Вакансії компанії ТОВ "Скай Софт"</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,14 +15,17 @@
   @@include('components/_header.html')
   <!-- end header section -->
 
-  <main class="main">
+  <main class="main ">
 
-    <div class="error">
-      <h1 class="error__title">404</h1>
-      <span class="error__subtitle">Вибачте, сторінка не знайдена!</span>
-      <a href="index.html" class="error__btn">Повернутись на головну</a>
+    <!-- start breadcrumbs section -->
+    @@include('components/_breadcrumbs.html', {"page-title":"Вакансії", "text":"Вакансії"})
+    <!-- end breadcrumbs section -->
+
+    <div class="container">
+      <!-- start vacancy section -->
+      @@include('components/about/_vacancy.html')
+      <!-- end vacancy section -->
     </div>
-
   </main>
 
   <!-- start footer section -->

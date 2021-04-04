@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Договір про постачання електричної енергії споживачу – ТОВ "ЕНЕРГОГАЗРЕЗЕРВ"</title>
+  <link href="images/favicon.ico" rel="icon">
+  <title>Договір та комерційні пропозиції електричної енергії споживачу від компанії ТОВ "Скай Софт"
+  </title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -32,11 +34,11 @@
               Про компанію
             </a>
 
-            <ul class="menu__list dropdown-menu__list">
+            <ul class="dropdown-menu__list menu__list dropdown-menu__first">
 
               <li class="dropdown-menu__item">
-                <a href="about.html" class="menu__link dropdown-menu__link">
-                  Про нас
+                <a href="#" class="menu__link dropdown-menu__link">
+                  Центр обслуговування
                 </a>
               </li>
 
@@ -47,13 +49,13 @@
               </li>
 
               <li class="dropdown-menu__item">
-                <a href="#" class="menu__link dropdown-menu__link">
-                  Партнери компанії
+                <a href="clients.html" class="menu__link dropdown-menu__link">
+                  Клієнти компанії
                 </a>
               </li>
 
               <li class="dropdown-menu__item">
-                <a href="#" class="menu__link dropdown-menu__link">
+                <a href="vacancy.html" class="menu__link dropdown-menu__link">
                   Вакансії
                 </a>
               </li>
@@ -66,29 +68,23 @@
               Електрична енергія
             </a>
 
-            <ul class="menu__list dropdown-menu__list">
+            <ul class="dropdown-menu__list menu__list ">
 
               <li class="dropdown-menu__item">
                 <a href="#" class="menu__link dropdown-menu__link">
-                  Поставка електроенергії
+                  Постачання електроенергії
                 </a>
               </li>
 
               <li class="dropdown-menu__item">
                 <a href="#" class="menu__link dropdown-menu__link">
-                  Комерційні пропозиції
+                  Стандарти якості послуг
                 </a>
               </li>
 
               <li class="dropdown-menu__item">
                 <a href="contracts.html" class="menu__link dropdown-menu__link">
-                  Договори
-                </a>
-              </li>
-
-              <li class="dropdown-menu__item">
-                <a href="law.html" class="menu__link dropdown-menu__link">
-                  Законодавство
+                  Договір та комерційні пропозиції
                 </a>
               </li>
 
@@ -98,6 +94,11 @@
                 </a>
               </li>
 
+              <li class="dropdown-menu__item">
+                <a href="law.html" class="menu__link dropdown-menu__link">
+                  Законодавство
+                </a>
+              </li>
             </ul>
           </li>
 
@@ -109,19 +110,31 @@
 
           <li class="menu__item dropdown-menu">
             <a href="#" class="menu__link menu__link--dropdown ">
-              споживачам
+              Споживачам
             </a>
 
-            <ul class="menu__list dropdown-menu__list">
+            <ul class="dropdown-menu__list menu__list dropdown-menu__last">
 
               <li class="dropdown-menu__item">
                 <a href="#" class="menu__link dropdown-menu__link">
+                  Зміна постачальника
+                </a>
+              </li>
+
+              <li class="dropdown-menu__item">
+                <a href="disputes.html" class="menu__link dropdown-menu__link">
+                  Вирішення спорів
+                </a>
+              </li>
+
+              <li class="dropdown-menu__item">
+                <a href="info.html" class="menu__link dropdown-menu__link">
                   Інфодовідка для споживачів
                 </a>
               </li>
 
               <li class="dropdown-menu__item">
-                <a href="#" class="menu__link dropdown-menu__link">
+                <a href="faq.html" class="menu__link dropdown-menu__link">
                   Поширені питання
                 </a>
               </li>
@@ -195,8 +208,20 @@
       <section class="contract">
 
   <h2 class="contract-title title">
-    Договір про постачання та комерційні пропозиції електричної енергії споживачу від компанії ТОВ "Скай Софт"
+    Комерційна пропозиція ТОВ «Скай Софт» на продаж електроенергії формується у відповідності до вимог правил
+    функціонування нового ринку електричної енергії.
   </h2>
+
+  <p class="content-box__text">
+    Згідно Закону України «Про ринок електричної енергії» з 1 липня 2019 року розпочав свою роботу «новий ринок
+    електричної енергії», метою якого є запровадження конкурентних механізмів функціонування ринку електроенергії,
+    вільний вибір контрагентів та забезпечення права споживача вільно обирати постачальника електричної енергії.
+  </p>
+  <p class="content-box__text">
+    Комерційна пропозиція ТОВ «Скай Софт» застосовується згідно з Договором постачання електричної енергії споживачу,
+    який є публічним договором приєднання, укладеним згідно статей 633, 634, 641, 642 Цивільного кодексу України, шляхом
+    приєднання Споживача до його умов.
+  </p>
 
   <div class="contract-block">
     <ul class="contract-block__list">
@@ -204,61 +229,75 @@
       <li class="contract-block__item">
 
         <p class="contract-block__text">Договір на постачання електричної енергії</p>
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/icons/doc-icon.svg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/icons/pdf-icon.svg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
+        </a>
 
       </li>
 
       <li class="contract-block__item">
 
         <p class="contract-block__text">Додаток 1 (заява-приєднання)</p>
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
-
+        </a>
       </li>
 
       <li class="contract-block__item">
 
         <p class="contract-block__text">Додаток 2 (Комерційна пропозиція № 1)</p>
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
-
+        </a>
       </li>
 
       <li class="contract-block__item">
 
         <p class="contract-block__text">Додаток 2 (Комерційна пропозиція № 2)</p>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
+        </a>
 
       </li>
 
@@ -266,15 +305,19 @@
 
         <p class="contract-block__text">Додаток 2 (Комерційна пропозиція № 5)</p>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
+        </a>
 
       </li>
 
@@ -282,15 +325,19 @@
 
         <p class="contract-block__text">Додаток 3 (Обсяги очікуванного споживання)</p>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
+        </a>
 
       </li>
 
@@ -298,15 +345,19 @@
 
         <p class="contract-block__text">Форма для подачі лімітів (погодинна)</p>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
+        </a>
 
       </li>
 
@@ -314,15 +365,19 @@
 
         <p class="contract-block__text">Показники якості надання послуг електропостачальника</p>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#doc-icon"></use>
+          </svg>
           Переглянути
-        </button>
+        </a>
 
-        <button class="contract-block__btn" type="button">
-          <img class="contract-block__img" src="images/doc-icon.jpg" alt="Логотип">
+        <a class="contract-block__btn" href="#">
+          <svg class="contract-block__icon" viewBox="0 0 132 132">
+            <use xlink:href="images/icons/sprite.svg#pdf-icon"></use>
+          </svg>
           Завантажити
-        </button>
+        </a>
 
       </li>
 
@@ -399,6 +454,7 @@
     To Top
   </a>
 
+  <script src="js/main.min.js "></script>
 </body>
 
 </html>

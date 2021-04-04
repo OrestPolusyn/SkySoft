@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="images/favicon.ico" rel="icon">
-  <title>SkySoft | Not found</title>
+  <title>Клієнти компанії ТОВ "Скай Софт"</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -15,13 +15,15 @@
   @@include('components/_header.html')
   <!-- end header section -->
 
-  <main class="main">
+  <main class="main client">
 
-    <div class="error">
-      <h1 class="error__title">404</h1>
-      <span class="error__subtitle">Вибачте, сторінка не знайдена!</span>
-      <a href="index.html" class="error__btn">Повернутись на головну</a>
-    </div>
+    <!-- start breadcrumbs section -->
+    @@include('components/_breadcrumbs.html', {"page-title": "Наші клієнти", "text":
+    "Клієнти"})
+    <!-- end breadcrumbs section -->
+    <!-- start contract section -->
+    @@include('components/about/_clients.html')
+    <!-- end contract section -->
 
   </main>
 
