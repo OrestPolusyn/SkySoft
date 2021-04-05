@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="images/favicon.ico" rel="icon">
+  <title>SkySoft | Новини</title>
+  <link rel="stylesheet" href="css/style.min.css">
+
+</head>
+
+<body>
+  <!-- start header section -->
+  @@include('components/_header.html')
+  <!-- end header section -->
+
+  <main class="main">
+
+    <!-- start breadcrumbs section -->
+    @@include('components/_breadcrumbs.html', {"page-title": "Останні новини", "text": "Новини" }
+    )
+    <!-- end breadcrumbs section -->
+
+    <div class="container">
+      <!-- start blog section -->
+      @@include('components/blog/_blog-page.html')
+      <!-- end blog section -->
+    </div>
+
+
+  </main>
+
+  <!-- start footer section -->
+  @@include('components/_footer.html')
+  <!-- end footer section -->
+
+  <a href="#" id="toTop" style="display: inline;">
+    <span id="toTopHover" style="opacity: 0;"></span>
+    To Top
+  </a>
+
+
+  <script src="js/main.min.js "></script>
+</body>
+
+</html>

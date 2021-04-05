@@ -1,5 +1,5 @@
 .contacts {
-  background-image: url("../images/contact-bg.png");
+  background-image: url("../images/contact-bg.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -55,15 +55,15 @@
   }
 
   &__item--mail::before {
-    background-image: url("../images/icons/map-marker.svg");
-  }
-
-  &__item--phone::before {
     background-image: url("../images/icons/mail.svg");
   }
 
-  &__item--marker::before {
+  &__item--phone::before {
     background-image: url("../images/icons/phone.svg");
+  }
+
+  &__item--marker::before {
+    background-image: url("../images/icons/map-marker.svg");
   }
 
   &__title {
@@ -103,7 +103,6 @@
   margin: 0 auto;
 
   .content-box__title {
-
     &::before,
     &::after {
       border: none;

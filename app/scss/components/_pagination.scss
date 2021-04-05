@@ -1,0 +1,42 @@
+.pagination {
+  width: 100%;
+  margin-bottom: 100px;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    margin-right: 10px;
+
+    &:last-child .pagination__link,
+    &:first-child .pagination__link {
+      border-color: transparent;
+
+      &:hover {
+        background-color: transparent;
+        color: #0d73fc;
+        border-bottom: 1px solid #0d73fc;
+      }
+    }
+  }
+
+  &__link {
+    border: 1px solid #0d73fc;
+    padding: 10px 14px;
+    @extend %Raleway-500;
+    color: $slogan;
+    font-size: 18px;
+    line-height: 1.5em;
+    transition: all 0.4s ease;
+
+    &:hover {
+      background-color: #0d73fc;
+      color: #fff;
+    }
+  }
+  &__link--active {
+    background-color: #0d73fc;
+    color: #fff;
+  }
+}
