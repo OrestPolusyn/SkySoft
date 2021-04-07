@@ -1,0 +1,42 @@
+.blog-posts {
+  margin-bottom: 60px;
+  .blog-sidebar__title {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    display: flex;
+    position: relative;
+    color: $slogan;
+    font-size: 16px;
+    line-height: 1.5em;
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    margin-right: 30px;
+  }
+
+  &__title {
+    margin-bottom: 14px;
+  }
+
+  &__link {
+    color: $slogan;
+    transition: color 0.3s ease-in;
+
+    &:hover {
+      color: #0d73fc;
+    }
+  }
+
+  &__date {
+    line-height: 24px;
+    font-size: 14px;
+    color: #777777;
+  }
+}

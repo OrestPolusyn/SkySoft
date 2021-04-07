@@ -1,8 +1,13 @@
 .blog {
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__articles {
-    max-width: 840px;
     width: 100%;
     position: relative;
+    margin-right: 60px;
   }
 
   &__item {
@@ -38,6 +43,10 @@
   &__link {
     display: block;
     color: $slogan;
+    transition: color 0.4s ease;
+    &:hover {
+      color: #0d73fc;
+    }
   }
 
   &__image {
@@ -143,7 +152,7 @@
       line-height: 1.5em;
       @extend %OpenSans-700;
       transition: color 0.4s ease-in-out;
-      &:hover{
+      &:hover {
         color: #0d73fc;
       }
     }

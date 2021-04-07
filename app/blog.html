@@ -205,7 +205,7 @@
 
     <div class="container">
       <!-- start blog section -->
-      <section class="blog">
+      <div class="blog">
 
   <div class="blog__wrapper">
 
@@ -247,7 +247,8 @@
 
         <div class="blog__more">
           <a class="blog__link" href="single.html">
-            Read more <svg class="blog__icon" viewBox="0 0 490 380">
+            Read more 
+            <svg class="blog__icon" viewBox="0 0 490 380">
               <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
             </svg>
           </a>
@@ -296,7 +297,8 @@
 
         <div class="blog__more">
           <a class="blog__link" href="single.html">
-            Read more <svg class="blog__icon" viewBox="0 0 490 380">
+            Read more 
+            <svg class="blog__icon" viewBox="0 0 490 380">
               <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
             </svg>
           </a>
@@ -345,7 +347,8 @@
 
         <div class="blog__more">
           <a class="blog__link" href="single.html">
-            Read more <svg class="blog__icon" viewBox="0 0 490 380">
+            Read more 
+            <svg class="blog__icon" viewBox="0 0 490 380">
               <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
             </svg>
           </a>
@@ -361,13 +364,205 @@
     </div>
 
 
-    <div class="blog__aside">
+    <!-- start aside-blog section -->
+    <aside class="blog-sidebar">
+  <form class="blog-sidebar__search" action="blog.html">
+
+    <input type="search" class="blog-sidebar__input" placeholder="Search..">
+
+    <button class="blog-sidebar__btn">
+
+      <svg class="blog-sidebar__icon" width="24" height="24">
+        <use xlink:href="images/icons/sprite.svg#serch"></use>
+      </svg>
+
+    </button>
+  </form>
+
+  <!-- start category section -->
+  <div class="blog-category">
+
+  <h3 class="blog-sidebar__title content-box__title">
+    Категорії
+  </h3>
+
+  <ul class="blog-sidebar__categories">
+
+    <li class="blog-sidebar__category">
+
+      <a href="#" class="blog-sidebar__category-link">
+
+        <svg class="blog__icon" viewBox="0 0 490 380">
+          <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
+        </svg>
+        Електрика</a>
+    </li>
+
+    <li class="blog-sidebar__category">
+
+      <a href="#" class="blog-sidebar__category-link">
+
+        <svg class="blog__icon" viewBox="0 0 490 380">
+          <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
+        </svg>
+        Новини</a>
+    </li>
+
+    <li class="blog-sidebar__category">
+      <a href="#" class="blog-sidebar__category-link">
+        <svg class="blog__icon" viewBox="0 0 490 380">
+          <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
+        </svg>
+        Сонячна електрика</a>
+    </li>
+
+    <li class="blog-sidebar__category">
+
+      <a href="#" class="blog-sidebar__category-link">
+        <svg class="blog__icon" viewBox="0 0 490 380">
+          <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
+        </svg>
+        Законодавство
+      </a>
+    </li>
+
+    <li class="blog-sidebar__category">
+
+      <a href="#" class="blog-sidebar__category-link">
+        <svg class="blog__icon" viewBox="0 0 490 380">
+          <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
+        </svg>
+        Сервіс
+      </a>
+    </li>
+
+    <li class="blog-sidebar__category">
+
+      <a href="#" class="blog-sidebar__category-link">
+        <svg class="blog__icon" viewBox="0 0 490 380">
+          <use xlink:href="images/icons/sprite.svg#blog-arrow"></use>
+        </svg>
+        Зміни
+      </a>
+    </li>
+
+  </ul>
+
+</div>
+  <!-- end category section -->
+
+  <!-- start recent-post section -->
+  <div class="blog-posts">
+
+  <h3 class="blog-sidebar__title content-box__title">
+    Останні новини
+  </h3>
+
+  <div class="blog-posts__list">
+    <div class="blog-posts__item">
+
+      <img src="images/recent-post/post-thumb.jpg" alt="Картинка" class="blog-posts__image">
+
+      <div class="blog-posts__content">
+        <h4 class="blog-posts__title">
+          <a class="blog-posts__link" href="#">Home Solar Power, Reuse By Maintainance</a>
+        </h4>
+        <div class="blog-posts__date">Posted: 23 Oct 2019</div>
+      </div>
 
     </div>
   </div>
 
-    <!-- start pagination section -->
-    <div class="pagination">
+  <div class="blog-posts__list">
+    <div class="blog-posts__item">
+
+      <img src="images/recent-post/post-thumb.jpg" alt="Картинка" class="blog-posts__image">
+
+      <div class="blog-posts__content">
+        <h4 class="blog-posts__title">
+          <a class="blog-posts__link" href="#">Home Solar Power, Reuse By Maintainance</a>
+        </h4>
+        <div class="blog-posts__date">Posted: 23 Oct 2019</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="blog-posts__list">
+    <div class="blog-posts__item">
+
+      <img src="images/recent-post/post-thumb.jpg" alt="Картинка" class="blog-posts__image">
+
+      <div class="blog-posts__content">
+        <h4 class="blog-posts__title">
+          <a class="blog-posts__link" href="#">Home Solar Power, Reuse By Maintainance</a>
+        </h4>
+        <div class="blog-posts__date">Posted: 23 Oct 2019</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+  <!-- end recent-post section -->
+
+    <!-- start tags section -->
+    <div class="tags">
+
+  <h3 class="blog-sidebar__title content-box__title">
+    Популярні розділи
+  </h3>
+
+  <ul class="tags__list">
+    <li class="tags__item">
+      <a href="#" class="tags__link">
+        Industry
+      </a>
+    </li>
+
+    <li class="tags__item">
+      <a href="#" class="tags__link">
+        lorem
+      </a>
+    </li>
+
+    <li class="tags__item">
+      <a href="#" class="tags__link">
+        asdasda
+      </a>
+    </li>
+
+    <li class="tags__item">
+      <a href="#" class="tags__link">
+        asdasd
+      </a>
+    </li>
+
+    <li class="tags__item">
+      <a href="#" class="tags__link">
+        asdasd
+      </a>
+    </li>
+
+    <li class="tags__item">
+      <a href="#" class="tags__link">
+        asdas
+      </a>
+    </li>
+  </ul>
+
+</div>
+    <!-- end tags section -->
+</aside>
+    <!-- end aside-blog section -->
+  </div>
+
+
+</div>
+      <!-- end blog section -->
+
+      <!-- start pagination section -->
+      <div class="pagination">
   <ul class="pagination__list">
 
     <li class="pagination__item">
@@ -408,9 +603,7 @@
 
   </ul>
 </div>
-    <!-- end pagination section -->
-</section>
-      <!-- end blog section -->
+      <!-- end pagination section -->
     </div>
 
 

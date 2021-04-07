@@ -1,0 +1,26 @@
+<aside class="blog-sidebar">
+  <form class="blog-sidebar__search" action="blog.html">
+
+    <input type="search" class="blog-sidebar__input" placeholder="Search..">
+
+    <button class="blog-sidebar__btn">
+
+      <svg class="blog-sidebar__icon" width="24" height="24">
+        <use xlink:href="images/icons/sprite.svg#serch"></use>
+      </svg>
+
+    </button>
+  </form>
+
+  <!-- start category section -->
+  @@include('_blog-category.html')
+  <!-- end category section -->
+
+  <!-- start recent-post section -->
+  @@include('_recent-post.html')
+  <!-- end recent-post section -->
+
+    <!-- start tags section -->
+    @@include('_tags.html')
+    <!-- end tags section -->
+</aside>
