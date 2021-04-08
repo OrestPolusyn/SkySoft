@@ -1,0 +1,104 @@
+.single-article {
+  padding-bottom: 70px;
+
+  .blog__block {
+    padding: 0 25px;
+  }
+
+  .blog__bottom {
+    padding: 40px 0 50px;
+  }
+
+  .blog__bottom-info {
+    border-bottom: 1px solid $slogan;
+    padding-bottom: 30px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0 0 15px;
+    color: $slogan;
+  }
+
+  blockquote {
+    position: relative;
+    display: block;
+    padding: 50px 70px 50px 50px;
+    background: #24345d;
+    color: #ffffff;
+    margin: 40px 0px;
+
+    p {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.6em;
+      margin-bottom: 20px;
+      color: #fff;
+      @extend %Raleway-300;
+      z-index: 2;
+      padding-right: 24px;
+    }
+
+    .info {
+      position: relative;
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: capitalize;
+      color: #406fe6;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    right: 0;
+    bottom: 0;
+    fill: #406fe6;
+    z-index: 0;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__img {
+    max-width: 500px;
+    width: 100%;
+    margin-right: 30px;
+  }
+
+  &__text {
+    h3 {
+      text-transform: capitalize;
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: $slogan;
+      @extend %OpenSans-700;
+    }
+
+    span {
+      display: block;
+      color: #777;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    margin-top: 50px;
+    span {
+      display: block;
+      margin-right: 14px;
+      @extend %OpenSans-800;
+      color: $slogan;
+    }
+  }
+}
