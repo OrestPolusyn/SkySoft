@@ -4,12 +4,15 @@
   &__content {
     text-align: center;
     margin: 0 auto;
-
   }
 
   &__list {
     display: flex;
     justify-content: space-between;
+    @include media_1023 {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
   }
 
   &__item {
@@ -46,6 +49,14 @@
       bottom: 20px;
       right: 20px;
     }
+
+    @include media_1023 {
+      margin: 0 20px 30px;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
   }
 
   &__item-title {
@@ -57,9 +68,6 @@
     padding-top: 80px;
     position: relative;
     margin-bottom: 40px;
-    ;
-
-
     &::after {
       content: "";
       position: absolute;
@@ -146,5 +154,11 @@
     line-height: 2;
     font-style: italic;
     @extend %text-limit;
+    @include media_979 {
+      padding: 0 100px;
+    }
+    @include media_768 {
+      padding: 0 30px;
+    }
   }
 }

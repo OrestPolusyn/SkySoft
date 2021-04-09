@@ -29,17 +29,30 @@
   box-shadow: 0 4px 16px 0 rgba(51, 51, 51, 0.1);
   margin-bottom: 80px;
 
+  @include media_979 {
+    padding: 50px;
+  }
+
   &__list {
     @extend %display-flex;
     align-items: start;
+    @include media_768 {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__item {
+    display: block;
     max-width: 260px;
     width: 100%;
     text-align: left;
     padding-left: 60px;
     position: relative;
+    @include media_768 {
+      max-width: 320px;
+      margin-bottom: 30px;
+    }
   }
 
   .icon::before {
@@ -170,5 +183,8 @@
     &:hover {
       @extend %active-link;
     }
+  }
+  &__name{
+    margin-right: 20px;
   }
 }

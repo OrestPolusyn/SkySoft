@@ -8,11 +8,16 @@
   align-items: start;
   border-bottom: 1px solid $slogan;
   margin-bottom: 30px;
+  
+  @include media_768 {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 
   &__item {
     max-width: 270px;
     width: 100%;
-    &:not(:last-child){
+    &:not(:last-child) {
       margin-right: 30px;
     }
   }

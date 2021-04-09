@@ -7,6 +7,9 @@
   &__list {
     padding: 50px 0;
     @extend %display-flex;
+    @include media_768 {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -17,6 +20,18 @@
 
     &:not(:last-child) {
       border-right: 1px solid #fff;
+    }
+
+    @include media_768 {
+      display: block;
+      margin: 0 auto;
+      width: 70%;
+      padding: 20px 0;
+
+      &:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid #fff;
+      }
     }
   }
 
@@ -38,5 +53,4 @@
     font-weight: 700;
     text-transform: uppercase;
   }
-
 }

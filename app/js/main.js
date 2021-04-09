@@ -17,6 +17,32 @@ $(function () {
       '<button type="button" class ="slick-next"><svg class="timeline__icon" width="50" height="50" viewBox="0 0 512 512"><use xlink:href="images/icons/sprite.svg#next"></use></svg></button>',
     prevArrow:
       '<button type="button" class ="slick-prev"><svg class="timeline__icon" width="50" height="50" viewBox="0 0 512 512"><use xlink:href="images/icons/sprite.svg#prev"></use></svg></button>',
+    responsive: [
+      {
+        breakpoint: 1480,
+        settings: {
+          slidesToShow: 4,
+        },
+      },
+      {
+        breakpoint: 1190,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 930,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
   $(".article-box__link").on("click", function () {
