@@ -8,6 +8,7 @@
   align-items: start;
   border-bottom: 1px solid $slogan;
   margin-bottom: 30px;
+  padding-bottom: 30px;
   
   @include media_768 {
     flex-wrap: wrap;

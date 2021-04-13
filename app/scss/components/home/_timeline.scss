@@ -7,6 +7,7 @@
 
     &__title {
       margin-bottom: 70px;
+      padding: 0 10px;
     }
 
     &__slogan {
@@ -42,6 +43,12 @@
     text-align: left;
     @extend %OpenSans-400;
     font-size: 16px;
+    @include media_979 {
+      padding-right: 80px;
+    }
+    @include media_768 {
+      padding-right: 40px;
+    }
   }
 
   &__item-text {
@@ -77,6 +84,12 @@
 
   .slick-track {
     margin-left: 120px;
+    @include media_979 {
+      margin-left: 60px;
+    }
+    @include media_768 {
+      margin-left: 30px;
+    }
   }
 
   .slick-current .timeline__item-top:after {

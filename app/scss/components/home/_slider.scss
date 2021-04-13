@@ -3,7 +3,7 @@
 
   &__item {
     background-color: #333;
-    padding: 70px 0;
+    padding: 70px 15px;
   }
 
   &__img {
@@ -11,6 +11,7 @@
     position: absolute;
     width: 100%;
     top: 0;
+    left: 0;
     opacity: 0.6;
     height: 100%;
     object-fit: cover;
@@ -20,6 +21,16 @@
     position: absolute;
     top: 30%;
     right: 40px;
+
+    @include media_1023 {
+      top: auto;
+      bottom: 20px;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   .slick-dots {
@@ -58,6 +69,10 @@
         width: 1px;
         background-color: #fff;
         transition: all 0.3s ease-in-out 0s;
+        @include media_1023 {
+          top: 12px;
+          left: 20px;
+        }
       }
 
       &.slick-active {
@@ -66,8 +81,17 @@
         &:not(:last-child) {
           margin-bottom: 100px;
 
+          @include media_1023 {
+            margin-bottom: 0;
+            margin-right: 100px;
+          }
+
           &::after {
             height: 80px;
+            @include media_1023 {
+              height: 1px;
+              width: 80px;
+            }
           }
         }
 
@@ -78,6 +102,10 @@
 
       &:not(:last-child) {
         margin-bottom: 20px;
+        @include media_1023 {
+          margin-bottom: 0;
+          margin-right: 20px;
+        }
       }
     }
   }
@@ -98,7 +126,6 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  margin-top: auto;
   text-align: center;
   color: #fff;
   @extend %Raleway-400;
@@ -140,6 +167,10 @@
     @extend %text-limit;
     text-transform: uppercase;
     margin-bottom: 20px;
+
+    @include media_1180 {
+      font-size: 42px;
+    }
   }
 
   &__text {

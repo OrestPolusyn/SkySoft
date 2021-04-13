@@ -1,6 +1,25 @@
 $(function () {
+  var trigger = $("#hamburger"),
+    isClosed = false;
+
+  trigger.on("click", function () {
+    burgerTime();
+  });
+
+  function burgerTime() {
+    if (isClosed == true) {
+      trigger.removeClass("is-open");
+      trigger.addClass("is-closed");
+      isClosed = false;
+    } else {
+      trigger.removeClass("is-closed");
+      trigger.addClass("is-open");
+      isClosed = true;
+    }
+  }
+
   $(".slider__list").slick({
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
     lazyLoad: "progressive",
@@ -50,6 +69,7 @@ $(function () {
     $(this).siblings(".article-box__content").addClass("active");
     $(this).addClass("active");
   });
+
   $(".info__block .info__item")
     .on("click", function () {
       $(".info__block .info__item")
@@ -65,6 +85,8 @@ $(function () {
     $(this).siblings(".faq__content").slideToggle();
     $(this).children(".faq__icon").toggleClass("open");
   });
+
+
 });
 
 var map;

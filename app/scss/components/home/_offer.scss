@@ -52,9 +52,8 @@
 
     @include media_1023 {
       margin: 0 20px 30px;
-
       &:not(:last-child) {
-        margin-right: 0;
+         margin: 0 20px 30px;
       }
     }
   }
@@ -68,6 +67,7 @@
     padding-top: 80px;
     position: relative;
     margin-bottom: 40px;
+
     &::after {
       content: "";
       position: absolute;
@@ -117,6 +117,12 @@
     @extend %title;
     position: relative;
     margin-bottom: 10px;
+    width: 100%;
+    max-width: 420px;
+
+    @include media_1180 {
+      font-size: 28px;
+    }
 
     &::before,
     &::after {
@@ -128,14 +134,14 @@
       border-right: none;
       border-bottom: none;
       top: -16px;
-      left: -40px;
+      left: 0;
     }
 
     &::after {
       border-left: none;
       border-top: none;
       bottom: -20px;
-      right: -40px;
+      right: 0;
     }
   }
 
@@ -154,7 +160,7 @@
     line-height: 2;
     font-style: italic;
     @extend %text-limit;
-    @include media_979 {
+    @include media_1180 {
       padding: 0 100px;
     }
     @include media_768 {
