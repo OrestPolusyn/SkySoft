@@ -1,25 +1,47 @@
 $(function () {
+
   var trigger = $("#hamburger"),
     isClosed = false;
 
   trigger.on("click", function () {
     burgerTime();
+    $(".menu").toggleClass("menu--open");
+    $(".main").toggleClass("overlay");
   });
 
   function burgerTime() {
     if (isClosed == true) {
       trigger.removeClass("is-open");
       trigger.addClass("is-closed");
+      $('body').css('overflow', 'auto');
       isClosed = false;
     } else {
       trigger.removeClass("is-closed");
       trigger.addClass("is-open");
+      $('body').css('overflow', 'hidden');
       isClosed = true;
     }
   }
 
+  $(".menu__item.dropdown-menu").on("click", function () {
+    $(".menu__item.dropdown-menu").children(".dropdown-menu__list.menu__list").removeClass("menu__list--open");
+    $(this).children(".dropdown-menu__list.menu__list").addClass("menu__list--open");
+
+  });
+
+
+
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+  });
+
+
   $(".slider__list").slick({
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     fade: true,
     lazyLoad: "progressive",
@@ -32,12 +54,9 @@ $(function () {
   $(".timeline__list").slick({
     dots: false,
     slidesToShow: 5,
-    nextArrow:
-      '<button type="button" class ="slick-next"><svg class="timeline__icon" width="50" height="50" viewBox="0 0 512 512"><use xlink:href="images/icons/sprite.svg#next"></use></svg></button>',
-    prevArrow:
-      '<button type="button" class ="slick-prev"><svg class="timeline__icon" width="50" height="50" viewBox="0 0 512 512"><use xlink:href="images/icons/sprite.svg#prev"></use></svg></button>',
-    responsive: [
-      {
+    nextArrow: '<button type="button" class ="slick-next"><svg class="timeline__icon" width="50" height="50" viewBox="0 0 512 512"><use xlink:href="images/icons/sprite.svg#next"></use></svg></button>',
+    prevArrow: '<button type="button" class ="slick-prev"><svg class="timeline__icon" width="50" height="50" viewBox="0 0 512 512"><use xlink:href="images/icons/sprite.svg#prev"></use></svg></button>',
+    responsive: [{
         breakpoint: 1480,
         settings: {
           slidesToShow: 4,
@@ -63,6 +82,17 @@ $(function () {
       },
     ],
   });
+
+
+  $(".clients__list").slick({
+    arrows: false,
+    dots: true,
+    fade: true,
+    lazyLoad: "progressive",
+    cssEase: "cubic-bezier(0.87, 0.03, 0.41, 0.9)",
+    slidesToShow: 1
+  });
+
 
   $(".article-box__link").on("click", function () {
     $(".article-box__link, .article-box__content").removeClass("active");
@@ -100,39 +130,31 @@ function initMap() {
 
     zoom: 13,
 
-    styles: [
-      {
+    styles: [{
         featureType: "administrative",
         elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#444444",
-          },
-        ],
+        stylers: [{
+          color: "#444444",
+        }, ],
       },
       {
         featureType: "landscape",
         elementType: "all",
-        stylers: [
-          {
-            color: "#f2f2f2",
-          },
-        ],
+        stylers: [{
+          color: "#f2f2f2",
+        }, ],
       },
       {
         featureType: "poi",
         elementType: "all",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [{
+          visibility: "off",
+        }, ],
       },
       {
         featureType: "road",
         elementType: "all",
-        stylers: [
-          {
+        stylers: [{
             saturation: -100,
           },
           {
@@ -143,35 +165,28 @@ function initMap() {
       {
         featureType: "road.highway",
         elementType: "all",
-        stylers: [
-          {
-            visibility: "simplified",
-          },
-        ],
+        stylers: [{
+          visibility: "simplified",
+        }, ],
       },
       {
         featureType: "road.arterial",
         elementType: "labels.icon",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [{
+          visibility: "off",
+        }, ],
       },
       {
         featureType: "transit",
         elementType: "all",
-        stylers: [
-          {
-            visibility: "off",
-          },
-        ],
+        stylers: [{
+          visibility: "off",
+        }, ],
       },
       {
         featureType: "water",
         elementType: "all",
-        stylers: [
-          {
+        stylers: [{
             color: "#46bcec",
           },
           {

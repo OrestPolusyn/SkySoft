@@ -8,6 +8,10 @@
   padding: 40px 0;
   margin-bottom: 60px;
 
+  @include media_600 {
+    padding: 40px 0 20px;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -27,6 +31,17 @@
     margin: 0 0 0 40px;
     font-size: 26px;
 
+    @include media_879 {
+      font-size: 21px;
+    }
+
+    @include media_600 {
+      font-size: 19px;
+      margin: 0 auto 30px;
+      text-align: center;
+      width: 95%;
+    }
+
     &::before,
     &::after {
       @extend %angle;
@@ -37,14 +52,24 @@
       border-right: none;
       border-bottom: none;
       top: -16px;
-      left: -40px;
+      left: -4%;
+
+      @include media_768 {
+        left: -4%;
+      }
+
     }
 
     &::after {
       border-left: none;
       border-top: none;
       bottom: -20px;
-      right: -40px;
+      right: -4%;
+
+      @include media_768 {
+        right: -4%;
+      }
+
     }
   }
 }
@@ -52,23 +77,36 @@
 .breadcrumbs-block {
   @extend %display-flex;
 
+  @include media_768 {
+    flex-wrap: wrap;
+  }
+
   &__list {
     @extend %display-flex;
+
+    @include media_600 {
+      margin: 0 auto;
+      width: 100%;
+      justify-content: center;
+    }
   }
 
   &__item {
-    margin-right: 20px;
     position: relative;
 
-    &:first-child::after {
-      content: "/";
-      position: absolute;
-      font-size: 20px;
-      color: #22293399;
-      line-height: 1;
-      right: -14px;
-      top: -2px;
-      color: $priority;
+    &:not(:last-child) {
+      margin-right: 20px;
+
+      &::after {
+        content: "/";
+        position: absolute;
+        font-size: 20px;
+        color: #22293399;
+        line-height: 1;
+        right: -14px;
+        top: -2px;
+        color: $priority;
+      }
     }
   }
 

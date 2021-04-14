@@ -7,7 +7,7 @@
     margin-bottom: 50px;
   }
 
-  &__title{
+  &__title {
     @extend %OpenSans-400;
     font-size: 20px;
     color: $secondary;
@@ -16,13 +16,26 @@
   &__block {
     display: flex;
     justify-content: space-between;
+
+    @include media_768 {
+      flex-wrap: wrap;
+
+    }
   }
 
   &__tabs {
     width: 50%;
 
+    @include media_768 {
+      width: 100%;
+    }
+
     &:first-child {
       margin-right: 70px;
+
+      @include media_768 {
+       margin-right: 0;
+      }
     }
   }
 

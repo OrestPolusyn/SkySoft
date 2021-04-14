@@ -31,10 +31,12 @@
     width: 65%;
     padding: 80px 60px 80px;
     z-index: 6;
+
     @include media_768 {
       width: 100%;
       padding: 30px;
     }
+
     @include media_480 {
       width: 100%;
       padding: 50px 10px;
@@ -44,8 +46,9 @@
   .content-box {
     &__title {
       color: #fff;
-     text-align: center;
+      text-align: center;
       margin-bottom: 30px;
+
 
       &::before,
       &::after {
@@ -55,7 +58,7 @@
 
     &__text {
       padding: 0;
-      text-align: justify;
+      text-align: left;
       font-style: normal;
       font-size: 16px;
       line-height: 2;
@@ -123,6 +126,7 @@
     }
 
     &:hover {
+
       &::after,
       &::before {
         width: 40px;

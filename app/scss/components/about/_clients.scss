@@ -4,21 +4,38 @@
 
   &__container {
     @extend %display-flex;
+
+    @include media_1023 {
+      flex-wrap: wrap-reverse;
+    }
   }
 
   &__list {
-    column-count: 2;
-    margin-right: 40px;
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 500px;
+
+    @include media_1023 {
+      margin-right: 0;
+      margin: 0 auto;
+      max-width: 100%;
+    }
   }
 
   &__item {
-    margin-right: 30px;
     margin-bottom: 30px;
     border: 1px solid #dfdfdf;
     background-color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
     transition: all 0.4s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+
+    @include media_1023 {
+      margin: 0 0 30px;
+    }
 
     &:hover {
       border-color: transparent;
@@ -29,11 +46,17 @@
   &__img {
     display: block;
     object-fit: contain;
+    margin: 0 auto;
   }
 
   &__content {
-    max-width: 580px;
     width: 100%;
+
+    @include media_1023 {
+      margin: 0 auto;
+      max-width: calc(100% - 10%);
+      margin-bottom: 50px;
+    }
   }
 
   &__blockquote {
@@ -42,6 +65,43 @@
     border-left: 3px solid #16a4d6;
     font-style: italic;
     line-height: 1.4;
+  }
+
+  .slick-dots {
+    display: flex;
+
+    li {
+      position: relative;
+      margin-bottom: 0;
+      transition: all 0.3s ease-in-out 0s;
+      margin-right: 20px;
+
+      button {
+        font-size: 0;
+        padding: 0;
+        width: 10px;
+        height: 10px;
+        line-height: 0;
+        color: transparent;
+        border: 1px solid $priority;
+        cursor: pointer;
+        border-radius: 50%;
+        background-color: transparent;
+
+        &:hover {
+          background-color: #fff;
+        }
+      }
+
+    }
+
+    li.slick-active button {
+      background-color: $priority;
+    }
+  }
+
+  .slick-slide div{
+    text-align: center;
   }
 }
 

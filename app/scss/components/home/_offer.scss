@@ -9,6 +9,7 @@
   &__list {
     display: flex;
     justify-content: space-between;
+
     @include media_1023 {
       flex-wrap: wrap;
       justify-content: space-evenly;
@@ -52,8 +53,9 @@
 
     @include media_1023 {
       margin: 0 20px 30px;
+
       &:not(:last-child) {
-         margin: 0 20px 30px;
+        margin: 0 20px 30px;
       }
     }
   }
@@ -124,6 +126,12 @@
       font-size: 28px;
     }
 
+    @include media_768 {
+      font-size: 24px;
+    }
+
+  
+
     &::before,
     &::after {
       @extend %angle;
@@ -160,9 +168,11 @@
     line-height: 2;
     font-style: italic;
     @extend %text-limit;
+
     @include media_1180 {
       padding: 0 100px;
     }
+
     @include media_768 {
       padding: 0 30px;
     }
