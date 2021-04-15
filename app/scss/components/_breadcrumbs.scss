@@ -9,7 +9,7 @@
   margin-bottom: 60px;
 
   @include media_600 {
-    padding: 40px 0 20px;
+    padding: 110px 0 20px;
   }
 
   &::before {
@@ -36,7 +36,6 @@
     }
 
     @include media_600 {
-      font-size: 19px;
       margin: 0 auto 30px;
       text-align: center;
       width: 95%;

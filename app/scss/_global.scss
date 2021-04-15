@@ -9,12 +9,8 @@ body {
 }
 
 .main {
-  padding-top: 80px;
   flex-grow: 1;
-
-  @include media_1023 {
-    padding-top: 70px;
-  }
+  transition: all 0.6s;
 
   &.overlay {
     opacity: 1;

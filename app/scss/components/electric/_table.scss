@@ -10,6 +10,12 @@
     color: #000;
   }
 
+  &__wrapper {
+    max-width: 1200px;
+    width: 100%;
+    overflow-x: scroll;
+  }
+
   &__table {
     border-collapse: collapse;
     font-size: 14px;
@@ -27,11 +33,19 @@
       text-align: left;
       font-size: 16px;
       @extend %OpenSans-700;
+      @include media_600 {
+        text-align: center;
+        padding: 10px;
+      }
     }
     td {
       text-align: center;
       font-size: 16px;
       @extend %OpenSans-400;
+      @include media_600 {
+        font-size: 14px;
+        padding: 10px 4px;
+      }
     }
 
     thead {
@@ -62,6 +76,10 @@
   @extend %Raleway-700;
   font-size: 18px;
   margin-bottom: 50px;
+  @include media_600 {
+    font-size: 16px;
+    
+  }
 
   a {
     color: #16a4d6;

@@ -16,6 +16,13 @@
   -webkit-line-clamp: 3;
   line-clamp: 3;
   text-align: center;
+  @include media_1180 {
+    font-size: 30px;
+  }
+
+  @include media_768 {
+    font-size: 24px;
+  }
 }
 
 .contract-block {
@@ -27,7 +34,7 @@
   }
 
   &__item {
-    max-width: 600px;
+    max-width: 566px;
     width: 100%;
     padding: 20px 24px;
     text-align: right;
@@ -37,14 +44,16 @@
     justify-content: flex-end;
     flex-wrap: wrap;
     transition: all 0.4s ease-in-out;
-
+    margin: 0 15px 30px;
 
     &:hover {
       box-shadow: 0 0 20px 5px rgba(51, 51, 51, 0.4);
     }
 
-    &:nth-child(n + 7) {
-      margin-bottom: 0;
+    &:last-child {
+      @include media_1180 {
+        margin-bottom: 0;
+      }
     }
   }
 
@@ -63,9 +72,19 @@
     @extend %btn;
     padding: 4px 10px;
     width: 200px;
-
+    @include media_600 {
+      width: 60%;
+    }
+    @include media_480 {
+      width: 80%;
+    }
     &:nth-child(2n) {
       margin-right: 30px;
+
+      @include media_600 {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
 
     &:hover {
@@ -75,7 +94,6 @@
         fill: #0d73fc;
       }
     }
-
   }
 
   &__icon {
@@ -84,7 +102,6 @@
     margin-right: 6px;
     fill: #fff;
     transition: all 0.5s ease-in-out;
-
   }
 
   &__text {
