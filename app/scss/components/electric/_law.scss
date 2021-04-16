@@ -1,13 +1,12 @@
 .law {
   margin-bottom: 100px;
 
+  &__title {
+    font-size: 23px;
+  }
+
   .content-box {
     margin-bottom: 40px;
-
-    &__title {
-      margin: 0 0 40px 40px;
-      font-size: 30px;
-    }
 
     &__text {
       padding: 0;
@@ -25,6 +24,9 @@
     padding-left: 40px;
     counter-reset: num;
     list-style: none;
+    @include media_600 {
+      padding-left: 20px;
+    }
   }
 
   &__item {
@@ -41,7 +43,8 @@
     &:hover {
       background-color: rgba(#0d73fc, 0.85);
 
-      &:before, .law__link {
+      &:before,
+      .law__link {
         color: #fff;
       }
     }
@@ -65,7 +68,5 @@
     display: block;
     transition: color 0.3s ease-in-out;
     padding: 16px 10px 16px 40px;
-
-   
   }
 }

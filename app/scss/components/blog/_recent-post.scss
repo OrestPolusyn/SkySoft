@@ -2,6 +2,11 @@
   margin-bottom: 60px;
   .blog-sidebar__title {
     margin-bottom: 40px;
+    display: inline;
+  }
+
+  &__list {
+    margin-top: 20px;
   }
 
   &__item {
@@ -12,7 +17,7 @@
     line-height: 1.5em;
     border-bottom: 1px solid #e0e0e0;
     padding-bottom: 20px;
-    margin-bottom: 20px;
+
   }
 
   &__image {

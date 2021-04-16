@@ -1,13 +1,19 @@
 .blog {
+  padding: 0 20px;
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+    @include media_979 {
+      flex-wrap: wrap-reverse;
+    }
   }
 
   &__articles {
     width: 100%;
     position: relative;
-    margin-right: 60px;
+    margin-right: 40px;
+    max-width: 800px;
   }
 
   &__item {
@@ -29,7 +35,7 @@
       background: #f6f8ff;
       z-index: 0;
     }
-    
+
     a {
       display: block;
       color: $slogan;
@@ -149,6 +155,8 @@
   }
   &__more {
     a {
+      display: flex;
+      margin-left: 6px;
       font-size: 16px;
       border-bottom: 2px solid #0d73fc;
       line-height: 1.5em;

@@ -1,6 +1,6 @@
 .blog-sidebar {
   width: 100%;
-  max-width: 370px;
+  max-width: 330px;
 
   &__search {
     position: relative;
@@ -51,6 +51,7 @@
     color: $slogan;
     text-transform: none;
     margin-bottom: 30px;
+    display: inline;
 
     &::before,
     &::after {
@@ -70,7 +71,7 @@
 
   &__categories {
     width: 100%;
-    margin-bottom: 60px;
+    margin: 20px 0 60px;
   }
 
   &__category {
