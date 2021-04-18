@@ -96,7 +96,7 @@
     @extend %text-limit;
 
     &:hover {
-      & + .articles-block__footer .articles-block__title {
+      &+.articles-block__footer .articles-block__title {
         color: $priority;
       }
     }
@@ -104,6 +104,7 @@
 
   &__footer {
     padding: 0 30px 25px;
+
     @include media_480 {
       padding: 0 14px 10px;
     }
@@ -120,6 +121,7 @@
     -webkit-line-clamp: 1;
     line-clamp: 1;
   }
+
   &__footer-content {
     padding: 0 20px 0 30px;
     width: 100%;
@@ -142,6 +144,7 @@
   &__items {
     max-width: 650px;
     width: 100%;
+
     @include media_879 {
       max-width: none;
     }

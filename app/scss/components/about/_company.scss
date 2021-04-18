@@ -2,7 +2,9 @@
   @extend %display-flex;
   margin-bottom: 100px;
   align-items: flex-start;
-
+  @include media_768 {
+    margin-bottom: 60px;
+  }
 
   &__content {
     max-width: 680px;

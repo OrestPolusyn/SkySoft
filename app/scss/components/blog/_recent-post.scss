@@ -1,5 +1,10 @@
 .blog-posts {
   margin-bottom: 60px;
+
+  @include media_979 {
+    display: none;
+  }
+
   .blog-sidebar__title {
     margin-bottom: 40px;
     display: inline;

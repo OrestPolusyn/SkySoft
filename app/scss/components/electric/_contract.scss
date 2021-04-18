@@ -13,9 +13,8 @@
 .contract-title {
   font-size: 30px;
   margin-bottom: 30px;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
   text-align: center;
+
   @include media_1180 {
     font-size: 30px;
   }
@@ -72,12 +71,15 @@
     @extend %btn;
     padding: 4px 10px;
     width: 200px;
+
     @include media_600 {
       width: 60%;
     }
+
     @include media_480 {
       width: 80%;
     }
+
     &:nth-child(2n) {
       margin-right: 30px;
 

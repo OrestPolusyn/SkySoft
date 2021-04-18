@@ -33,15 +33,18 @@
       text-align: left;
       font-size: 16px;
       @extend %OpenSans-700;
+
       @include media_600 {
         text-align: center;
         padding: 10px;
       }
     }
+
     td {
       text-align: center;
       font-size: 16px;
       @extend %OpenSans-400;
+
       @include media_600 {
         font-size: 14px;
         padding: 10px 4px;
@@ -76,9 +79,10 @@
   @extend %Raleway-700;
   font-size: 18px;
   margin-bottom: 50px;
+
   @include media_600 {
     font-size: 16px;
-    
+
   }
 
   a {

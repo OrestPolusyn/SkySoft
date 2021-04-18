@@ -162,15 +162,59 @@
   &__item.dropdown-menu {
     position: relative;
 
-    &::after {
-      content: ">";
+    &::before {
+      display: none;
+      content: "";
       position: absolute;
-      transform: rotate(90deg);
-      height: 6px;
-      width: 6px;
-      right: -6px;
-      top: 4px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      width: 22%;
+      border-left: 1px solid $secondary;
+
+      @include media_1023 {
+        display: block;
+      }
     }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      margin: 0 auto;
+      z-index: 11;
+      display: block;
+      width: 10px;
+      bottom: -8px;
+      height: 10px;
+      border-top: 3px solid $secondary;
+      border-left: 3px solid $secondary;
+      transform: rotate(225deg);
+      cursor: pointer;
+      transition: all 0.2s ease-in-out 0s;
+
+      @include media_1023 {
+        transform: rotate(135deg);
+        top: 22px;
+        right: 10%;
+        left: auto;
+
+      }
+
+
+
+    }
+
+    &:hover::after {
+      border-color: #fbc903;
+
+    }
+
+
+
+
   }
 }
 
@@ -254,6 +298,12 @@
     color: #fbc903;
   }
 
+  &:hover {
+    .menu__item.dropdown-menu::after {
+      border-color: #fbc903;
+    }
+  }
+
   &:hover .menu__link--dropdown::before,
   &:hover .menu__link--dropdown::after {
     width: 20px;
@@ -331,16 +381,20 @@
   }
 }
 
+.menu__item.dropdown-menu.rotate::after {
+  transform: rotate(225deg);
+}
+
 .hamburglar {
   display: none;
-  transform: scale(0.8);
+  transform: scale(0.75);
   position: relative;
   background-color: transparent;
   -webkit-touch-callout: none;
   user-select: none;
   position: relative;
   top: 4px;
-  left: 4px;
+  left: 0;
 
   @include media_1023 {
     display: block;
@@ -365,7 +419,6 @@
   height: 68px;
 }
 
-// what this does is create a small square that I then rotate behind an svg mask, giving the apparence of the line animating
 .path-rotation {
   height: 34px;
   width: 34px;

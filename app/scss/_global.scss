@@ -1,3 +1,10 @@
+html {
+  -webkit-text-size-adjust: none;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+}
+
 body {
   @extend %OpenSans-400;
   font-size: 14px;
@@ -6,6 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .main {
@@ -27,8 +35,19 @@ body {
       right: 0;
       z-index: 5;
       opacity: 0.5;
+      display: none;
+
+      @include media_1023 {
+
+        display: block;
+      }
     }
+
   }
+}
+
+.overflow {
+  overflow: hidden;
 }
 
 .container {
@@ -39,19 +58,34 @@ body {
 }
 
 #toTop {
-  bottom: 0;
-  right: 0;
-  display: none;
-  width: 60px;
-  height: 40px;
-  overflow: hidden;
   position: fixed;
-  text-decoration: none;
-  z-index: 9999;
-  font-size: 0;
-  color: transparent;
-  background-color: #16a4d6;
-  opacity: 0.7;
+  bottom: 30px;
+  right: 3%;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+  width: 50px;
+  height: 50px;
+  line-height: 30px;
+  border-radius: 50%;
+  background-color: $priority;
+  opacity: 0.8;
+  border: 1px solid $secondary;
+  -webkit-overflow-scrolling: touch;
+
+  &::before {
+    content: "";
+    background-image: url("../images/icons/page_up_arrow.png");
+    width: 22px;
+    height: 22px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 12px;
+    position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }
 
 .content-box__title {
@@ -115,4 +149,10 @@ input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none;
+}
+
+input,
+textarea,
+input[type="search"] {
+  appearance: none;
 }

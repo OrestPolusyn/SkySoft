@@ -1,9 +1,14 @@
 .blog {
   padding: 0 20px;
 
+  @include media_979 {
+    padding: 0;
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
+
     @include media_979 {
       flex-wrap: wrap-reverse;
     }
@@ -14,6 +19,11 @@
     position: relative;
     margin-right: 40px;
     max-width: 800px;
+
+    @include media_979 {
+      margin-right: 0;
+      max-width: 100%;
+    }
   }
 
   &__item {
@@ -23,6 +33,10 @@
     display: block;
     padding: 0px 30px;
     transition: all 0.3s ease;
+
+    @include media_979 {
+      padding: 0;
+    }
 
     &::before {
       content: "";
@@ -40,6 +54,7 @@
       display: block;
       color: $slogan;
       transition: color 0.4s ease;
+
       &:hover {
         color: #0d73fc;
       }
@@ -49,6 +64,10 @@
   &__block {
     position: relative;
     z-index: 1;
+
+    @include media_979 {
+      padding: 0 15px;
+    }
   }
 
   &__top {
@@ -92,6 +111,10 @@
 
   &__bottom {
     padding: 40px 25px 50px;
+
+    @include media_979 {
+      padding: 40px 0;
+    }
   }
 
   h2 {
@@ -99,6 +122,14 @@
     font-size: 28px;
     margin-bottom: 20px;
     @extend %OpenSans-700;
+
+    @include media_979 {
+      font-size: 24px;
+    }
+
+    @include media_600 {
+      font-size: 20px;
+    }
   }
 
   p {
@@ -106,6 +137,11 @@
     line-height: 1.5em;
     text-align: justify;
     margin-bottom: 25px;
+
+    @include media_979 {
+      font-size: 15px;
+    }
+
   }
 
   &__bottom-info {
@@ -114,6 +150,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include media_979 {
+      flex-wrap: wrap;
+    }
+
 
     &::before {
       content: "";
@@ -128,7 +169,13 @@
   &__meta {
     color: $slogan;
     font-size: 16px;
+    line-height: 1.5em;
     display: flex;
+
+    @include media_480 {
+      flex-wrap: wrap;
+      width: 100%;
+    }
 
     a {
       position: relative;
@@ -139,6 +186,7 @@
       &:first-child {
         margin-right: 18px;
         margin-left: 4px;
+
         &::before {
           content: "|";
           position: absolute;
@@ -153,15 +201,21 @@
       }
     }
   }
+
   &__more {
     a {
-      display: flex;
       margin-left: 6px;
       font-size: 16px;
       border-bottom: 2px solid #0d73fc;
       line-height: 1.5em;
       @extend %OpenSans-700;
       transition: color 0.4s ease-in-out;
+
+      @include media_480 {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+
       &:hover {
         color: #0d73fc;
       }
@@ -170,7 +224,7 @@
 
   &__icon {
     fill: #0d73fc;
-    height: 20px;
-    width: 30px;
+    height: 15px;
+    width: 26px;
   }
 }

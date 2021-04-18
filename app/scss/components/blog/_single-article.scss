@@ -1,25 +1,9 @@
 .single-article {
   padding-bottom: 70px;
 
-  .blog__block {
-    padding: 0 25px;
-  }
-
-  .blog__bottom {
-    padding: 40px 0 50px;
-  }
-
   .blog__bottom-info {
     border-bottom: 1px solid $slogan;
     padding-bottom: 30px;
-  }
-
-  p {
-    font-size: 16px;
-    line-height: 1.5em;
-    font-weight: 400;
-    margin: 0 0 15px;
-    color: $slogan;
   }
 
   blockquote {
@@ -29,6 +13,10 @@
     background: #24345d;
     color: #ffffff;
     margin: 40px 0px;
+
+    @include media_600 {
+      padding: 20px 50px 20px 20px;
+    }
 
     p {
       position: relative;
@@ -61,18 +49,39 @@
     bottom: 0;
     fill: #406fe6;
     z-index: 0;
+
+    @include media_600 {
+     width: 60px;
+     height: 60px;
+    }
   }
 
   &__content {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+
+    @include media_600 {
+      flex-wrap: wrap-reverse;
+    }
   }
 
   &__img {
     max-width: 500px;
     width: 100%;
     margin-right: 30px;
+    min-width: 280px;
+    align-self: center;
+
+    @include media_600 {
+      margin: 0;
+    }
+  }
+
+  &__image {
+    @include media_600 {
+      margin: 0 auto;
+    }
   }
 
   &__text {
@@ -94,6 +103,7 @@
   &__tags {
     display: flex;
     margin-top: 50px;
+
     span {
       display: block;
       margin-right: 14px;

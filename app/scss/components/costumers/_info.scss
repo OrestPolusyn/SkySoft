@@ -21,6 +21,24 @@
     margin-right: 50px;
     overflow: hidden;
 
+    &::-webkit-scrollbar-thumb {
+      height: 2px;
+    }
+
+    &::-webkit-scrollbar {
+      width: px;
+      background-color: $secondary;
+      border: 1px solid $priority;
+      border-radius: 10px;
+    height: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border: 3px solid $priority;
+      border-radius: 10px;
+
+    }
+
     @include media_768 {
       display: flex;
       overflow-x: scroll;
@@ -30,17 +48,12 @@
       padding-bottom: 10px;
     }
 
-    &__tabs::-webkit-scrollbar {
-      width: 100px;
-      height: 100px;
-    }
   }
 
   &__item {
     margin-bottom: 20px;
     cursor: pointer;
-    display: flex;
-    justify-content: space-between;
+    @extend %display-flex;
     background-color: rgba(13, 115, 252, 0.85);
     padding-right: 10px;
     transition: all 0.5s ease-in-out;
@@ -48,20 +61,6 @@
 
     @include media_768 {
       margin: 0 20px 0 0;
-    }
-
-    &:hover {
-      background-color: #fff;
-      border: 1px solid $priority;
-
-      .info__tab {
-        color: $priority;
-      }
-
-      .info__icon {
-        fill: $priority;
-        border-left-color: $priority;
-      }
     }
 
     &:last-child {
@@ -77,6 +76,7 @@
     border-left: 1px solid $secondary;
     border-bottom: 1px solid transparent;
     padding-left: 20px;
+
     @include media_768 {
       transform: rotate(90deg);
       border-bottom-color: $secondary;
@@ -96,6 +96,7 @@
     .info__icon {
       fill: $priority;
       border-left-color: $priority;
+
       @include media_768 {
         transform: rotate(90deg);
         border-bottom-color: $priority;
@@ -113,6 +114,7 @@
     @extend %OpenSans-400;
     font-size: 15px;
     padding: 20px 0 20px 30px;
+
     @include media_768 {
       padding: 12px 30px;
     }

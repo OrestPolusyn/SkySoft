@@ -123,11 +123,11 @@
     max-width: 420px;
 
     @include media_1180 {
-      font-size: 28px;
+      font-size: 30px;
     }
 
     @include media_768 {
-      font-size: 24px;
+      font-size: 26px;
     }
 
   
@@ -167,7 +167,6 @@
     padding: 0 250px;
     line-height: 2;
     font-style: italic;
-    @extend %text-limit;
 
     @include media_1180 {
       padding: 0 100px;

@@ -9,6 +9,10 @@
   z-index: 0;
   padding-top: 10%;
 
+  @include media_600 {
+    padding-top: 25%;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -32,12 +36,20 @@
     -webkit-line-clamp: 1;
     line-clamp: 1;
 
+    @include media_600 {
+      font-size: 200px;
+    }
+
+    @include media_480 {
+      font-size: 140px;
+    }
+
 
     &::before {
       content: "ooops!";
       position: absolute;
       top: 53%;
-      left: 49.3%;
+      left: 49.5%;
       @extend %Raleway-700;
       font-size: 30px;
       line-height: 1;
@@ -45,6 +57,14 @@
       letter-spacing: 0;
       transform: translate(-50%, -50%) rotate(90deg);
       color: #fff;
+
+      @include media_600 {
+        font-size: 26px;
+      }
+
+      @include media_480 {
+        font-size: 18px;
+      }
     }
   }
 

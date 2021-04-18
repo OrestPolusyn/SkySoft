@@ -4,6 +4,11 @@
 
   &__list {
     display: flex;
+
+    @include media_979 {
+      justify-content: center;
+
+    }
   }
 
   &__item {
@@ -19,6 +24,10 @@
         border-bottom: 1px solid #0d73fc;
       }
     }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__link {
@@ -30,11 +39,16 @@
     line-height: 1.5em;
     transition: all 0.4s ease;
 
+    @include media_480 {
+      padding: 9px;
+    }
+
     &:hover {
       background-color: #0d73fc;
       color: #fff;
     }
   }
+
   &__link--active {
     background-color: #0d73fc;
     color: #fff;

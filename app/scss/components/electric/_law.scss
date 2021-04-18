@@ -24,6 +24,7 @@
     padding-left: 40px;
     counter-reset: num;
     list-style: none;
+
     @include media_600 {
       padding-left: 20px;
     }
@@ -68,5 +69,6 @@
     display: block;
     transition: color 0.3s ease-in-out;
     padding: 16px 10px 16px 40px;
+    line-height: 1.5em;
   }
 }

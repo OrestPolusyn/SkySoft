@@ -1,15 +1,14 @@
 .breadcrumbs {
-  background-image: url("../images/airmill.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center calc(100% - 80%);
   position: relative;
   background-attachment: fixed;
-  padding: 40px 0;
+  padding: 120px 0 40px;
   margin-bottom: 60px;
 
   @include media_600 {
-    padding: 110px 0 20px;
+    padding: 100px 0 20px;
   }
 
   &::before {
@@ -35,7 +34,7 @@
       font-size: 21px;
     }
 
-    @include media_600 {
+    @include media_768 {
       margin: 0 auto 30px;
       text-align: center;
       width: 95%;
@@ -50,10 +49,10 @@
     &::before {
       border-right: none;
       border-bottom: none;
-      top: -16px;
-      left: -4%;
+      top: -10px;
+      left: -20px;
 
-      @include media_768 {
+      @include media_600 {
         left: -4%;
       }
 
@@ -62,10 +61,10 @@
     &::after {
       border-left: none;
       border-top: none;
-      bottom: -20px;
-      right: -4%;
+      bottom: -10px;
+      right: -20px;
 
-      @include media_768 {
+      @include media_600 {
         right: -4%;
       }
 
@@ -83,7 +82,7 @@
   &__list {
     @extend %display-flex;
 
-    @include media_600 {
+    @include media_768 {
       margin: 0 auto;
       width: 100%;
       justify-content: center;
