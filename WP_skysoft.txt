@@ -1,8 +1,0 @@
-phpMyAdmin:
-
-Login: sky_admin	
-Password: ^SkySoft^2020$
-
-Admin WP:
-Login: Orest_admin
-Password:Opect31031993$
